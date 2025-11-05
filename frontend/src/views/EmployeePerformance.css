@@ -1,0 +1,251 @@
+/* ============================================
+   EmployeePerformance.css
+   Elegant Corporate Grey-Blue UI Theme
+============================================ */
+
+/* -------- Color Tokens -------- */
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #64748b;
+  --text: #1f2937;
+  --accent: #1e90ff;
+  --accent-strong: #0074d9;
+  --danger: #ef4444;
+  --surface-border: #e6eef8;
+  --shadow: 0 6px 20px rgba(16, 24, 40, 0.04);
+}
+
+/* -------- Page Wrapper -------- */
+.performance-page {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--text);
+  background: var(--bg);
+  padding: 24px;
+  line-height: 1.5;
+  transition: all 0.3s ease-in-out;
+}
+
+/* -------- Header Section -------- */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.home-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--text);
+}
+
+.small.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* -------- Table Container -------- */
+.table-container {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.table-container:hover {
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+}
+
+/* -------- Table Styles -------- */
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table-container thead th {
+  background: #f1f5f9;
+  color: var(--text);
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--surface-border);
+  white-space: nowrap;
+}
+
+.table-container tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f4f6f9;
+  vertical-align: top;
+}
+
+.table-container tbody tr:nth-child(even) {
+  background: #fbfcfe;
+}
+
+.table-container tbody tr:hover {
+  background: #f5f6f7;
+  transition: background 0.2s ease-in-out;
+}
+
+/* -------- Card (Form Container) -------- */
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 28px rgba(16, 24, 40, 0.08);
+  transform: translateY(-2px);
+}
+
+/* -------- Form Layout -------- */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--surface-border);
+  font-size: 14px;
+  outline: none;
+  background-color: #f9fafb;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.08);
+  background-color: #ffffff;
+}
+
+/* -------- Form Buttons -------- */
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.btn-action {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #fff;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-action:hover {
+  background: linear-gradient(135deg, var(--accent-strong), #005bb5);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
+}
+
+.btn-action:active {
+  transform: translateY(1px);
+}
+
+.btn-action:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-delete {
+  background: var(--danger);
+  color: #fff;
+  padding: 9px 14px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+}
+
+.btn-secondary {
+  background: #94a3b8;
+  color: #fff;
+  padding: 9px 14px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background: #64748b;
+}
+
+/* -------- Utility -------- */
+.text-center {
+  text-align: center;
+}
+
+/* -------- Responsive Design -------- */
+@media (max-width: 900px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .form-actions {
+    justify-content: stretch;
+    flex-direction: row;
+  }
+
+  .form-actions button {
+    flex: 1;
+  }
+
+  .table-container thead th,
+  .table-container tbody td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .performance-page {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+}
+
+/* -------- Layout Adjustment Beside Sidebar -------- */
+.home-page,
+.performance-page {
+  margin-left: 200px; /* matches .side-bar width */
+  min-height: calc(100vh - 60px); /* below navbar */
+}
