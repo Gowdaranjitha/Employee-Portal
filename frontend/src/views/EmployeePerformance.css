@@ -1,9 +1,3 @@
-/* ============================================
-   EmployeePerformance.css
-   Elegant Corporate Grey-Blue UI Theme
-============================================ */
-
-/* -------- Color Tokens -------- */
 :root {
   --bg: #f6f8fb;
   --card: #ffffff;
@@ -16,9 +10,12 @@
   --shadow: 0 6px 20px rgba(16, 24, 40, 0.04);
 }
 
-/* -------- Page Wrapper -------- */
 .performance-page {
-  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  padding: 24px;
   color: var(--text);
   background: var(--bg);
   padding: 24px;
@@ -26,7 +23,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* -------- Header Section -------- */
 .home-header {
   display: flex;
   justify-content: space-between;
@@ -48,7 +44,6 @@
   font-size: 13px;
 }
 
-/* -------- Table Container -------- */
 .table-container {
   background: var(--card);
   border-radius: 12px;
@@ -62,7 +57,6 @@
   box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
 }
 
-/* -------- Table Styles -------- */
 .table-container table {
   width: 100%;
   border-collapse: collapse;
@@ -109,7 +103,6 @@
   transform: translateY(-2px);
 }
 
-/* -------- Form Layout -------- */
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -136,7 +129,6 @@
   background-color: #ffffff;
 }
 
-/* -------- Form Buttons -------- */
 .form-actions {
   grid-column: 1 / -1;
   display: flex;
@@ -171,8 +163,8 @@
 }
 
 .btn-delete {
-  background: var(--danger);
-  color: #fff;
+  background-color: #ba3e3e;
+  color: white;
   padding: 9px 14px;
   border-radius: 8px;
   border: 0;
@@ -182,7 +174,7 @@
 }
 
 .btn-delete:hover {
-  background: #dc2626;
+  background: #a01414;
   box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
 }
 
@@ -200,12 +192,9 @@
   background: #64748b;
 }
 
-/* -------- Utility -------- */
 .text-center {
   text-align: center;
 }
-
-/* -------- Responsive Design -------- */
 @media (max-width: 900px) {
   .form-grid {
     grid-template-columns: 1fr;
@@ -243,9 +232,8 @@
   }
 }
 
-/* -------- Layout Adjustment Beside Sidebar -------- */
 .home-page,
 .performance-page {
-  margin-left: 200px; /* matches .side-bar width */
-  min-height: calc(100vh - 60px); /* below navbar */
+  margin-left: 200px; 
+  min-height: calc(100vh - 60px); 
 }

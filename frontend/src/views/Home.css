@@ -1,8 +1,3 @@
-/* ======================================================
-   Home.css
-   Professional Corporate Dashboard (Admin & Employee)
-====================================================== */
-
 :root {
   --bg: #f6f8fb;
   --card: #ffffff;
@@ -20,7 +15,6 @@
   --font: "Poppins", "Inter", sans-serif;
 }
 
-/* -------- Page Layout -------- */
 .home-page {
   font-family: var(--font);
   color: var(--text);
@@ -30,7 +24,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* -------- Header -------- */
 .home-header {
   display: flex;
   justify-content: space-between;
@@ -70,7 +63,7 @@
   transform: translateY(1px);
 }
 
-/* -------- Table Section -------- */
+
 .table-container {
   background: var(--card);
   border-radius: var(--radius);
@@ -120,7 +113,6 @@
   padding: 16px;
 }
 
-/* -------- Buttons (Actions) -------- */
 .btn-action {
   background: var(--accent);
   color: #fff;
@@ -157,7 +149,6 @@
   box-shadow: 0 3px 8px rgba(148, 163, 184, 0.25);
 }
 
-/* -------- Form Card -------- */
 .card {
   background: var(--card);
   padding: 22px;
@@ -179,7 +170,6 @@
   font-weight: 600;
 }
 
-/* -------- Form Layout -------- */
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -204,7 +194,6 @@
   background-color: #fff;
 }
 
-/* -------- Form Button Row -------- */
 .form-actions {
   grid-column: 1 / -1;
   display: flex;
@@ -213,7 +202,6 @@
   margin-top: 12px;
 }
 
-/* -------- Responsive Design -------- */
 @media (max-width: 900px) {
   .form-grid {
     grid-template-columns: 1fr;
@@ -249,11 +237,13 @@
     font-size: 12px;
     padding: 6px 10px;
   }
+  .btn-delete{
+    color:rgb(160, 36, 36);
+  }
 }
 
-/* -------- Layout Beside Sidebar -------- */
 .home-page,
 .performance-page {
-  margin-left: 200px; /* sidebar width */
-  min-height: calc(100vh - 60px); /* below navbar */
+  margin-left: 200px; 
+  min-height: calc(100vh - 60px); 
 }

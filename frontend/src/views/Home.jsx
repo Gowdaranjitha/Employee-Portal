@@ -170,7 +170,7 @@ export default function Home() {
                     )}
                     {user?.role === "admin" && (
                       <button
-                        className="btn-action btn-delete"
+                        className="btn-delete"
                         onClick={() => remove(emp._id)}
                       >
                         Delete
@@ -190,8 +190,6 @@ export default function Home() {
           </table>
         )}
       </div>
-
-      {/* ✅ Show form only when admin clicked Create or Edit, or employee clicked Edit */}
       {showForm && (
         <div className="card" style={{ marginTop: 18 }}>
           <h3>{editingId ? "Edit Employee" : "Create Employee"}</h3>

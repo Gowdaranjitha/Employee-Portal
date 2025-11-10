@@ -11,12 +11,11 @@ export default function EmployeePerformance() {
   const initial = { userId: "", skills: "", projects: "", achievements: "" };
   const [form, setForm] = useState(initial);
   const [saving, setSaving] = useState(false);
-  const [employees, setEmployees] = useState([]); // For admin to map user names
+  const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
     load();
     if (user?.role === "admin") loadEmployees();
-    // eslint-disable-next-line
   }, []);
 
   const load = async () => {
@@ -75,7 +74,7 @@ export default function EmployeePerformance() {
     if (user?.role === "admin" && form.userId) {
       payload.user = form.userId;
     } else {
-      payload.user = user._id; // employee updates their own
+      payload.user = user._id; 
     }
 
     try {
@@ -147,7 +146,7 @@ export default function EmployeePerformance() {
                         <button className="btn-action" onClick={() => startEdit(p)}>Edit</button>
                       )}
                       {user?.role === "admin" && (
-                        <button className="btn-action btn-delete" onClick={() => remove(p._id)}>Delete</button>
+                        <button className="btn-delete" onClick={() => remove(p._id)}>Delete</button>
                       )}
                     </td>
                   </tr>
@@ -157,8 +156,6 @@ export default function EmployeePerformance() {
           </table>
         )}
       </div>
-
-      {/* Create/Edit Form */}
       {(user?.role === "admin" || editingId) && (
         <div className="card" style={{ marginTop: 18 }}>
           <h3>{editingId ? "Edit Performance" : "Create Performance"}</h3>
